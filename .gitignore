@@ -1,3 +1,4 @@
+!reqirements.txt
 venv
 *.txt
 set_env.prod.sh
