@@ -21,18 +21,19 @@ async def main():
     current_time = get_wib_time()
 
     try:
-        data = {
-            "PON1_Total": "10",
-            "PON2_Total": "NULL",
-            "PON1_Online": "1",
-            "PON1_Offline": "9",
-            "PON2_Online": "NULL",
-            "PON2_Offline": "NULL",
-        }
-        # data = await get_oid_data(SNMP_SERVER, oids)
-        print("Data retrieved:", data)
+        # data = {
+        #     "PON1_Total": "10",
+        #     "PON2_Total": "NULL",
+        #     "PON1_Online": "1",
+        #     "PON1_Offline": "9",
+        #     "PON2_Online": "NULL",
+        #     "PON2_Offline": "NULL",
+        # }
         # Simulate an error for testing
         # raise Exception("Simulated error for testing purposes")
+
+        data = await get_oid_data(SNMP_SERVER, oids)
+        print("Data retrieved:", data)
     except Exception as e:
         print("Error retrieving SNMP data:", e)
         message = "Error retrieving SNMP data, OLT offline."
