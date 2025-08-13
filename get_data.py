@@ -1,15 +1,6 @@
 import asyncio
 from pysnmp.hlapi.v3arch.asyncio import *
-
-oids_data = {
-    "PON1_Total": "1.3.6.1.4.1.50224.3.2.3.1.3.16777472",
-    "PON2_Total": "1.3.6.1.4.1.50224.3.2.3.1.3.16777728",
-    "PON1_Online": "1.3.6.1.4.1.50224.3.2.3.1.4.16777472",
-    "PON1_Online": "1.3.6.1.4.1.50224.3.2.3.1.4.16777728",
-    "PON1_Offline": "1.3.6.1.4.1.50224.3.2.3.1.5.16777472",
-    "PON1_Offline": "1.3.6.1.4.1.50224.3.2.3.1.5.16777728",
-}
-
+from utils import oids_data, format_time, get_wib_time
 
 async def get_oid_data(snmp_server: str, oids: list[str]) -> dict[str, str]:
     snmp_engine = SnmpEngine()
