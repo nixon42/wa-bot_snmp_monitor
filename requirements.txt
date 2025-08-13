@@ -1,0 +1,9 @@
+certifi==2025.8.3
+charset-normalizer==3.4.3
+idna==3.10
+pyasn1==0.6.1
+pysnmp==7.1.21
+pytz==2025.2
+requests==2.32.4
+urllib3==2.5.0
+whatsapp-api-client-python==0.0.49

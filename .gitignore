@@ -1,6 +1,6 @@
-!reqirements.txt
-venv
 *.txt
+!requirements.txt
+venv
 set_env.prod.sh
 __pycache__
 *.pyc
